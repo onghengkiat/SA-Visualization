@@ -32,8 +32,8 @@ The website is hosted on heroku using docker container following this
 
 ### Testing on localhost : 
 
-1)Run "docker build -t (image_name)"
-2)Run "docker run -it --name (container_name) -p 2000:5000 (image_name)"
+1) Run "docker build -t (image_name)"
+2) Run "docker run -it --name (container_name) -p 2000:5000 (image_name)"
 
 **Notes: Make sure your working directory is at SA-Visualization**
 
