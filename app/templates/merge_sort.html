@@ -1,0 +1,28 @@
+{% extends "sorting_template.html" %}
+{% block title %}Merge Sort Algorithm{% endblock %}
+
+{% block sorting %}
+<script src="static/js/merge_sort.js"></script>
+{% endblock %}
+
+{% block description %}
+<strong>Merge Sort</strong></br>
+Merge sort divide the list into half. 
+Then, the half is subdivided again until there is only 1 element in the pile.
+Then, merge them together. A temporary array is created when merging.
+Compare first element of both pile and insert the smaller value to the temporary array.
+Next, proceed to compare the next element and compare again.
+After all values have been inserted. Replace the values in original array with the values in temporary array.
+{% endblock %}
+
+{% block color %}
+The above container with <strong style="color:purple;">purple</strong> color refer to original array after being replaced
+while the below container with <strong style="color:green;">green</strong> color refer to temporary array.
+{% endblock %}
+
+{% block extra %}
+<div class = "container-fluid pt-3"->
+    <div id="merge_array" class="justify-content-center d-flex"></div>
+</div>
+{% endblock %}
+

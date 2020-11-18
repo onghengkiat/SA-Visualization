@@ -1,0 +1,20 @@
+{% extends "sorting_template.html" %}
+{% block title %}Quick Sort Algorithm{% endblock %}
+
+{% block sorting %}
+<script src="static/js/quick_sort.js"></script>
+{% endblock %}
+
+
+{% block description %}
+<strong>Quick Sort</strong></br>
+Quick sort is a divide-and-conquer algorithm. 
+First, a splitting value is selected and the list is divided into two piles. 
+The left pile contains all value smaller or equal than the splitting value while the right pile contains all value greater than the splitting value. 
+Then, the pile is subdivided again. The process continues until the small piles cannot be further divided.
+{% endblock %}
+
+{% block color %}
+The vertical bars with <strong style="color:green;">green</strong> color refer to "comparing"
+while the vertical bars <strong style="color:red;">red</strong> color refer to "swaping"
+{% endblock %}

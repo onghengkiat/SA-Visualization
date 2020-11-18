@@ -1,0 +1,82 @@
+{% extends "base_template.html" %}
+
+{% block title %}Sorting Algorithm{% endblock %}
+
+{% block source %}
+<link rel="stylesheet" href="static/css/slider.css">
+<script src="static/js/drag.js"></script>
+
+<!--Icon css-->
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!--To insert the js for the sorting algorithm-->
+{% block sorting %}
+{% endblock %}
+
+{% endblock %}
+
+{% block body %}
+<div id="control_panel" class="container pt-3 floating_container" style="max-width: 400px;">
+    <div id="alert_holder"></div>
+    <ul class="list-group">
+        <div class="row ">
+            <div id="start" class="col btn btn-light">START</div>
+            <div id="stop" class="col btn btn-light">PAUSE</div>
+            <div id="previous" class="col btn btn-light">PREV</div>
+            <div id="next" class="col btn btn-light">NEXT</div>
+        </div>
+        <li class="list-group-item-action list-group-item">
+            <label for="size">Dataset Size</label>
+            <input type="range" id="size" class="slider" min="2" max="500" value="300"></input>
+            <label for="size" class="float-left">2</label>
+            <label for="size" class="float-right">500</label>    
+        </li>
+        <li class="list-group-item-action list-group-item">
+            <label for="speed">Sorting Speed (x swap/s)</label>
+            <input type="range" id="speed" class="slider" min="1" max="500" value="50"></input>
+            <label for="speed" class="float-left">1</label>
+            <label for="speed" class="float-right">500</label>   
+        </li>
+        <li class="list-group-item justify-content-center d-flex">
+            <div id="time" class="badge badge-info badge-pill p-2"></div>
+        </li>
+    </ul>
+</div>
+
+<div id="help" class="container pt-3 floating_container" style="max-width: 300px;" data-toggle="collapse">
+    <div data-target="#help_title"  data-toggle="collapse">
+        <i class="material-icons" style="font-size:48px;color:blue;">help</i>
+    </div>
+
+    <ul id="help_title" class="list-group collapse">
+        <li data-target="#description" class="list-group-item-action list-group-item" data-toggle="collapse">
+            Description
+            <div id="description" class="collapse" data-parent="#help_title">{% block description %}{% endblock %}</div>
+        </li>
+        <li data-target="#color" class="list-group-item-action list-group-item" data-toggle="collapse">
+            Color
+            <div id="color" class="collapse" data-parent="#help_title">{% block color %}{% endblock %}</div>
+        </li>
+        <li data-target="#control_panel" class="list-group-item-action list-group-item" data-toggle="collapse">
+            Control Panel
+            <div id="control_panel" class="collapse" data-parent="#help_title">
+                There is a semi-transparent control panel on the left hand side on the screen when it is loaded.
+                You could manage the flow of sorting through the buttons on the first row.
+                You could also change the attribute of dataset through the slider for size and speed. 
+                The last block is showing the real time required to sort the dataset using the algorithm.</br>
+                <strong>Reminder: The dataset would be reset when the size or speed is changed.</strong>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class = "container-fluid pt-3"->
+    <div id="data_set" class="justify-content-center d-flex"></div>
+</div>
+
+{% block extra %}
+{% endblock %}
+
+{% endblock %}
+

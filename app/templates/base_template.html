@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    {% block source %}
+    {% endblock %}
+</head>
+<body>
+    <nav id="navigation_bar" class="navbar navbar-expand-sm bg-light navbar-light">
+        <kbd class="navbar-brand text-center text-white">SA Visual</kbd>
+
+        <!-- Navigation bar when the screen is minimized -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- The navigator items-->
+        <div class="collapse navbar-collapse" id="navigation">
+            <ul id="navigator" class="navbar-nav">
+                <li class="nav-item active"><a class="nav-link" href="/">ABOUT</a></li>
+
+                <!-- Dropdown list for algorithm selection -->
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" id="navbardrop" href="#" data-toggle="dropdown">SORTING</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="/selection_sort">SELECTION SORT</a>
+                        <a class="dropdown-item" href="/bubble_sort">BUBBLE SORT</a>
+                        <a class="dropdown-item" href="/quick_sort">QUICK SORT</a>
+                        <a class="dropdown-item" href="/insertion_sort">INSERTION SORT</a>
+                        <a class="dropdown-item" href="/merge_sort">MERGE SORT</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="float-right">Created by Ong Heng Kiat</div>
+    </nav>
+    {% block body %}
+    {% endblock %}
+</body>
+</html>

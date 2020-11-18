@@ -1,0 +1,11 @@
+#navigation_bar .nav-item a:hover{
+    background-color: aqua;
+  }
+  
+
+.floating_container{
+  position: absolute;
+  cursor: move;
+  opacity: 0.8;
+}
+
