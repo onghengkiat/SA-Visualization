@@ -29,17 +29,17 @@ The website is hosted on <a class="font-weight-bolder" href="https://sa-visualiz
 
 The website is hosted on heroku using docker container following this 
 <a href="https://dev.to/erenaspire7/deploying-a-dockerized-flask-app-to-heroku-5h7j">guide</a>.
-Testing on localhost : 
+
+### Testing on localhost : 
+
 1)Run "docker build -t (image_name)"
 2)Run "docker run -it --name (container_name) -p 2000:5000 (image_name)"
 
 **Notes: Make sure your working directory is at SA-Visualization**
-</br>
-Deploy on heroku:
-1) Run "heroku login".
 
-**Notes: If heroku login shows browser cant be open. then try "heroku login -i"**
+### Deploy on heroku:
 
+1) Run "heroku login".If heroku login shows browser cant be opened, then try "heroku login -i"
 2) Run "heroku create (app-name)". Remember the app-link.
 3) Run "git remote add (branch-name) (app-link)"
 4) Run "git add ."
