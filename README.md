@@ -18,6 +18,9 @@ I am inspired by <a class="font-weight-bolder" href="http://qiao.github.io/PathF
 The website is hosted on <a class="font-weight-bolder" href="https://sa-visualization.herokuapp.com/">SA - Visualization</a>. Feel free to use it.
 
 ## Developer Guide
+
+### Testing on localhost without using docker: 
+
 1) Make sure pip/pip3 and python3 is installed in your computer.
 2) If you prefer to run it on a python virtual environment. Do step 3 - 4, else skip it.
 3) Run "python3 -m venv env"
@@ -30,7 +33,7 @@ The website is hosted on <a class="font-weight-bolder" href="https://sa-visualiz
 The website is hosted on heroku using docker container following this 
 <a href="https://dev.to/erenaspire7/deploying-a-dockerized-flask-app-to-heroku-5h7j">guide</a>.
 
-### Testing on localhost : 
+### Testing on localhost using docker: 
 
 1) Run "docker build -t (image_name)"
 2) Run "docker run -it --name (container_name) -p 2000:5000 (image_name)"
