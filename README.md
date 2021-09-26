@@ -50,4 +50,5 @@ The website is hosted on heroku using docker container following this
 5) Run "git commit -m "First Commit"
 6) Run "heroku stack:set container"
 7) Run "git push (branch-name)"
+
 **Notes: Steps 2, 3 and 6 are for first deployment only**
