@@ -8,6 +8,7 @@ I am inspired by <a class="font-weight-bolder" href="http://qiao.github.io/PathF
 2) JQuery
 3) Bootstrap
 4) HTML and CSS
+5) Docker
 
 ## Scope of Functionalities
 ---
@@ -35,7 +36,7 @@ The website is hosted on heroku using docker container following this
 
 ### Testing on localhost using docker: 
 
-1) Run "docker build -t (image_name)"
+1) Run "docker build . -t (image_name)"
 2) Run "docker run -it --name (container_name) -p 2000:5000 (image_name)"
 
 **Notes: Make sure your working directory is at SA-Visualization**
@@ -48,4 +49,5 @@ The website is hosted on heroku using docker container following this
 4) Run "git add ."
 5) Run "git commit -m "First Commit"
 6) Run "heroku stack:set container"
-7) Run "git push (branch-name) master"
+7) Run "git push (branch-name)"
+**Notes: Steps 2, 3 and 6 are for first deployment only**
